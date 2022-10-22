@@ -16,15 +16,14 @@ token = $TOKEN
 tls_enable = true
 tls_cert_file = /ssl/$TLS_CERT_FILE
 tls_key_file = /ssl/$TLS_KEY_FILE
-tls_trusted_ca_file = /ssl/$TLS_TRUSTED_CA_FILE
-[ha]
+[$SUBDOMAIN]
 type = https
 local_port = 443
 remote_port = 443
 use_encryption = true
 use_compression = true
 subdomain = $SUBDOMAIN
-[ha-unsec]
+[$SUBDOMAIN-unsec]
 type = http
 local_port = 80
 remote_port = 80
