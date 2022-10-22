@@ -1,7 +1,7 @@
 {
   "name": "FRP Client",
   "slug": "frpclient",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fast reverse proxy for remote access",
   "arch": [
     "aarch64",
