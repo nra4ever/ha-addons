@@ -1,0 +1,37 @@
+{
+  "name": "FRP Client",
+  "slug": "frpclient",
+  "version": "1.0.1",
+  "description": "Fast reverse proxy for remote access",
+  "arch": [
+    "aarch64",
+    "armv7",
+    "armhf",
+    "amd64"
+  ],
+  "boot": "auto",
+  "host_network": true,
+  "init": false,
+  "map": [
+    "ssl:ro"
+  ],
+  "startup": "application",
+  "options": {
+    "server_address": null,
+    "server_port": 7070,
+    "token": null,
+    "tls_cert_file": null,
+    "tls_key_file": null,
+    "tls_trusted_ca_file": null,
+    "subdomain": null
+  },
+  "schema": {
+    "server_address": "str",
+    "server_port": "port",
+    "token": "password",
+    "tls_cert_file": "str",
+    "tls_key_file": "str",
+    "tls_trusted_ca_file": "str",
+    "subdomain": "str"
+  }
+}
