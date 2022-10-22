@@ -6,8 +6,7 @@
   "arch": [
     "aarch64",
     "armv7",
-    "armhf",
-    "amd64"
+    "armhf"
   ],
   "boot": "auto",
   "host_network": true,
