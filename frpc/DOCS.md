@@ -10,7 +10,7 @@ Follow these steps to get the add-on installed on your system:
 
 ## How to use
 
-This addon is designed to work with the official NGINX and Let's Encrypt Community Addons, which in conjuction with an external server allows you to acces Home Assistant remotely without opening a port or even behind one or multiple NATs.
+This addon is designed to work with the official NGINX and Let's Encrypt Community Addons, which in conjuction with an external server allows you to access Home Assistant remotely without opening a port or even behind one or multiple NATs.
 
 1. Create an frp server, using the following example to build your own configuration, please ensure to replace the variables below with your own values. Any additional information on how to configure frps can be found [at the original projects README.](https://github.com/fatedier/frp/blob/dev/README.md). Additionally, ensure ports 80 and 443 are open on the server.
 ```
