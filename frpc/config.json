@@ -1,6 +1,6 @@
 {
   "name": "FRP Client",
-  "slug": "frpclient",
+  "slug": "frpc-ha",
   "version": "1.0.4",
   "description": "Fast reverse proxy for remote access",
   "arch": [
