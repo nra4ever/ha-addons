@@ -35,14 +35,11 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
       - name: Test build
-        uses: home-assistant/builder@master
+        uses: home-assistant/arm64-builder@master
         with:
           args: |
             --test \
-            --armhf \
-            --armv7 \
             --aarch64 \
-            --i386 \
             --target frpc \
             --docker-hub nra4ever
   
