@@ -3,6 +3,9 @@ name: "Publish"
 on:
   release:
     types: [published]
+  secrets:
+    CAS_API_KEY:
+      required: false
 
 jobs:
   publish:
@@ -22,4 +25,4 @@ jobs:
           args: |
             --all \
             --target frpc \
-            --docker-hub nra4ever/frpc-ha
+            --docker-hub frpc-ha

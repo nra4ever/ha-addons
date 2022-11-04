@@ -3,6 +3,9 @@ name: notarise and test build addon
 on:
   push:
     branches: [main]
+  secrets:
+    CAS_API_KEY:
+      required: false
 
 jobs:
   notarize-docker-image:
@@ -41,4 +44,4 @@ jobs:
             --test \
             --aarch64 \
             --target frpc \
-            --docker-hub nra4ever/frpc-ha
+            --docker-hub frpc-ha
