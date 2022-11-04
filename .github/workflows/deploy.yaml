@@ -3,9 +3,7 @@ name: notarise and test build addon
 on:
   push:
     branches: [main]
-  secrets:
-    CAS_API_KEY:
-      required: false
+
 
 jobs:
   notarize-docker-image:

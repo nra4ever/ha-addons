@@ -3,9 +3,7 @@ name: "Publish"
 on:
   release:
     types: [published]
-  secrets:
-    CAS_API_KEY:
-      required: false
+
 
 jobs:
   publish:
