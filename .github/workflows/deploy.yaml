@@ -35,7 +35,7 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
       - name: Test build
-        uses: home-assistant/arm64-builder@master
+        uses: home-assistant/builder@master
         with:
           args: |
             --test \
