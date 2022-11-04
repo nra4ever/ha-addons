@@ -39,7 +39,10 @@ jobs:
         with:
           args: |
             --test \
-            --all \
+            --armhf \
+            --armv7 \
+            --aarch64 \
+            --i386 \
             --target frpc \
             --docker-hub nra4ever
   
