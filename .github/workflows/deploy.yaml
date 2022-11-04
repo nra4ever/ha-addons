@@ -1,11 +1,11 @@
-name: notarize-docker-image-bom
+name: notarise and test build addon
 
 on:
   push:
     branches: [main]
 
 jobs:
-  notarize-docker-image:
+  - notarize-docker-image:
     runs-on: ubuntu-latest
 
     services:
@@ -29,3 +29,17 @@ jobs:
           # make it notarize it's own Docker image B-)
           asset: docker://codenotary/cas:bom-docker
           cas_api_key: ${{ secrets.CAS_API_KEY }}
+  - name: Test build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Test build
+        uses: home-assistant/builder@master
+        with:
+          args: |
+            --test \
+            --all \
+            --target frpc \
+            --docker-hub nra4ever
+  
