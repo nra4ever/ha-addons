@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  - notarize-docker-image:
+  notarize-docker-image:
     runs-on: ubuntu-latest
 
     services:
@@ -29,7 +29,7 @@ jobs:
           # make it notarize it's own Docker image B-)
           asset: docker://codenotary/cas:bom-docker
           cas_api_key: ${{ secrets.CAS_API_KEY }}
-  - name: Test build
+  test-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
