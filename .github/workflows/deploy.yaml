@@ -41,5 +41,5 @@ jobs:
             --test \
             --aarch64 \
             --target frpc \
-            --docker-hub nra4ever
+            --docker-hub nra4ever/frpc-ha
   
