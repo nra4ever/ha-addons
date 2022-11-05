@@ -1,8 +1,9 @@
 {
   "name": "FRP Client",
   "slug": "frpclient",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fast reverse proxy for remote access",
+  "codenotary": "nra4everdev@proton.me",
   "arch": [
     "aarch64",
     "armv7",
