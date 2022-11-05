@@ -2,7 +2,7 @@
 
 Repo for HA addons created by me
 
-##Addons
+## Addons
 
-###FRP Client
-A fast reverse proxy fopr external access to home assistant
+### FRP Client
+A fast reverse proxy for external access to home assistant
