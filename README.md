@@ -4,7 +4,7 @@ Repo for HA addons created by me
 
 ## Addons
 
-### FRP Client
+### [FRP Client](https://github.com/nra4ever/ha-addons/tree/main/frpc)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports armhf Architecture][armhf-shield]
