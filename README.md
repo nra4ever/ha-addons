@@ -1,6 +1,9 @@
 # nra4ever Home Assistant Addon Repository
 
 Repo for HA addons created by me
+<br><br>
+<a href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fnra4ever%2Fha-addons"><img src="https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg" height="25" /></a>
+
 
 ## Addons
 
