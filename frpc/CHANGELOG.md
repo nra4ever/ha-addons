@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- Update FRP to version 0.46.0
+
 ## 1.0.5
 
 - Signed with Codenotary CAS
