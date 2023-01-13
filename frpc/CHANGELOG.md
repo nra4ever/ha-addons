@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.46.1
+
+- Changed version number to more closely resemble FRP version
+- Update FRP to version 0.46.1
+
 ## 1.0.6
 
 - Update FRP to version 0.46.0
