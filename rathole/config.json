@@ -1,0 +1,40 @@
+{
+  "name": "Rathole Client",
+  "slug": "ratholeclient",
+  "version": "0.4.7.0",
+  "description": "Even faster reverse proxy for remote access",
+  "codenotary": "nra4everdev@proton.me",
+  "arch": [
+    "aarch64",
+    "armv7",
+    "armhf",
+    "amd64"
+  ],
+  "boot": "auto",
+  "host_network": true,
+  "init": false,
+  "map": [
+    "ssl:ro"
+  ],
+  "startup": "application",
+  "options": {
+    "remote_address": null,
+    "name_ssl": "ha",
+    "local_address_ssl": "0.0.0.0:443",
+    "name_http": "ha-insec",
+    "local_address_http": "0.0.0.0:80",
+    "token": null,
+    "trusted_root": "ca.crt",
+    "hostname": null
+  },
+  "schema": {
+    "remote_address": "str",
+    "name_ssl": "str",
+    "local_address_ssl": "str",
+    "name_http": "str",
+    "local_address_http": "str",
+    "token": "password",
+    "trusted_root": "str",
+    "hostname": "str"
+  }
+}

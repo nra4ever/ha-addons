@@ -1,0 +1,3 @@
+codenotary:
+  codenotary.signer: nra4everdev@proton.me
+  codenotary.base_image: notary@home-assistant.io
