@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.4.7.1
+## 0.4.7.2
 
 - Fix for amd64 folder naming
 
