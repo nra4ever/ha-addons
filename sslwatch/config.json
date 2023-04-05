@@ -1,7 +1,7 @@
 {
   "name": "SSLWatch",
   "slug": "sslwatch",
-  "version": "0.5",
+  "version": "0.6",
   "description": "remote cert fetcher",
   "codenotary": "nra4everdev@proton.me",
   "arch": [
@@ -17,12 +17,10 @@
   "startup": "application",
   "options": {
     "remote_address": null,
-    "subdomain": "fok",
-    "private-key": null
+    "subdomain": "fok"
   },
   "schema": {
     "remote_address": "str",
-    "subdomain": "str",
-    "private-key": "password"
+    "subdomain": "str"
   }
 }

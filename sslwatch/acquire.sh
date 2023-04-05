@@ -1,6 +1,5 @@
 #!/usr/bin/with-contenv bashio
-touch key
-key=$(bashio::config 'private-key')
+key=/ssl/prikey
 server_name=$(bashio::config 'remote-address')
 subdomain=$(bashio::config 'subdomain')
 if [[ -f "/ssl/version" ]]; then
