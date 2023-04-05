@@ -12,7 +12,7 @@ fi
 interval=3600
 
 # Set the destination path for the remote key file
-remote_key_file=/etc/nginx/ssl/$subdomain.guth3d.com/
+remote_key_file="/etc/nginx/ssl/$subdomain.guth3d.com/"
 
 while true; do
     # Wait for the specified interval
