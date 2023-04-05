@@ -1,0 +1,12 @@
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+RUN \
+  apk add --no-cache \
+    rsync
+
+# Copy data for add-on
+COPY acquire.sh /
+COPY rootfs /
+RUN chmod a+x /acquire.sh
+CMD [ "/acqiure.sh" ]
