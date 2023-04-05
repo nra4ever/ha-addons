@@ -1,7 +1,7 @@
 {
   "name": "SSLWatch",
   "slug": "sslwatch",
-  "version": "0.4",
+  "version": "0.45",
   "description": "remote cert fetcher",
   "codenotary": "nra4everdev@proton.me",
   "arch": [

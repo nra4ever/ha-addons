@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/with-contenv bashio
 touch key
 echo $(bashio::config 'private-key') > key
 chmod 600 key
