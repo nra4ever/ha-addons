@@ -4,17 +4,17 @@ echo $(bashio::config 'private-key') > key
 chmod 600 key
 server_name=$(bashio::config 'remote-address')
 subdomain=$(bashio::config 'subdomain')
+if [[ -f "/ssl/version" ]]; then
+    curr_ver=$(cat /ssl/version)
+else
+    touch /ssl/version
+    echo 1 > /etc/version
+fi
 # Set the interval in seconds for checking the version
 interval=3600
 
-# Set the target server name
-server_name=fok
-
 # Set the destination path for the remote key file
 remote_key_file=/etc/nginx/ssl/$subdomain.guth3d.com/
-
-# Get the current version
-curr_ver=$(cat version)
 
 while true; do
     # Wait for the specified interval
