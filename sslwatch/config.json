@@ -6,8 +6,6 @@
   "codenotary": "nra4everdev@proton.me",
   "arch": [
     "aarch64",
-    "armv7",
-    "armhf",
     "amd64"
   ],
   "boot": "auto",
