@@ -9,4 +9,4 @@ RUN \
 COPY acquire.sh /
 COPY rootfs /
 RUN chmod a+x /acquire.sh
-CMD [ "/acqiure.sh" ]
+CMD [ "/acquire.sh" ]
