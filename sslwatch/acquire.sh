@@ -1,7 +1,6 @@
 #!/usr/bin/with-contenv bashio
 touch key
-echo $(bashio::config 'private-key') > key
-chmod 600 key
+key=$(bashio::config 'private-key')
 server_name=$(bashio::config 'remote-address')
 subdomain=$(bashio::config 'subdomain')
 if [[ -f "/ssl/version" ]]; then
@@ -26,7 +25,7 @@ while true; do
     # Check if the version has changed
     if [[ $latest_ver != $curr_ver ]]; then
         # Copy the SSL keys to the local machine using SCP
-        rsync -Pav -e "ssh -i key" debian@$server_name:$remote_key_file /ssl/
+        rsync -Pav -e "ssh -i $key" debian@$server_name:$remote_key_file /ssl/
         # Update the current version
         curr_ver=$latest_ver
         echo $latest_ver > /version
