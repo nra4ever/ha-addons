@@ -11,16 +11,13 @@ if [[ -f "/ssl/version" ]]; then
     curr_ver=$(cat /ssl/version)
 else
     touch /ssl/version
-    echo 1 > /etc/version
+    echo "1" > /etc/version
 fi
 # Set the interval in seconds for checking the version
 interval=3600
 
 # Set the destination path for the remote key file
 remote_key_file="/etc/nginx/ssl/$subdomain.guth3d.com/"
-
-echo $(ssh-add -l)
-echo $(ls -al ~)
 
 while true; do
     # Get the latest     version
@@ -30,10 +27,10 @@ while true; do
     # Check if the version has changed
     if [[ $latest_ver != $curr_ver ]]; then
         # Copy the SSL keys to the local machine using SCP
-        rsync -Pav -e "ssh -i fok2c" debian@$server_name:$remote_key_file /ssl/ --rsync-path="sudo rsync"
+        rsync -Pav -e "ssh -i $(subdomain)2c" debian@$server_name:$remote_key_file /ssl/ --rsync-path="sudo rsync"
         # Update the current version
         curr_ver=$latest_ver
-        echo $latest_ver > /version
+        echo $latest_ver > /ssl/version
         echo "SSL keys updated from $server_name"
     fi
     # Wait for the specified interval
