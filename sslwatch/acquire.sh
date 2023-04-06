@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 key=/ssl/prikey
-server_name=$(bashio::config 'remote-address')
+server_name=$(bashio::config 'remote_address')
 subdomain=$(bashio::config 'subdomain')
 if [[ -f "/ssl/version" ]]; then
     curr_ver=$(cat /ssl/version)
