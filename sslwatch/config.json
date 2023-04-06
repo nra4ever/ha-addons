@@ -1,7 +1,7 @@
 {
   "name": "SSLWatch",
   "slug": "sslwatch",
-  "version": "0.73",
+  "version": "0.74",
   "description": "remote cert fetcher",
   "codenotary": "nra4everdev@proton.me",
   "arch": [
@@ -9,7 +9,7 @@
     "amd64"
   ],
   "boot": "auto",
-  "host_network": false,
+  "host_network": true,
   "init": false,
   "map": [
     "ssl:rw"
