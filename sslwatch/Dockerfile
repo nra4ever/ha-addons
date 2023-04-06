@@ -7,7 +7,7 @@ RUN \
 
 RUN \
   apk add --no-cache \
-    openssh-client
+    openssh-client ssh-agent
 
 # Copy data for add-on
 COPY acquire.sh /
