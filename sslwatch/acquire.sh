@@ -16,7 +16,7 @@ remote_key_file="/etc/nginx/ssl/$subdomain.guth3d.com/"
 
 while true; do
     # Get the latest version
-    version_output=$(curl http://162.19.65.207:8783/get_version/$subdomain)
+    version_output=$(curl http://$server_name:8783/get_version/$subdomain)
     latest_ver=$(echo "$version_output" | grep -o "\"version\":.*" | sed -e 's/^.*: //' -e 's/[},]*$//')
 
     # Check if the version has changed
