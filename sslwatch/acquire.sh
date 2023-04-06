@@ -19,7 +19,8 @@ while true; do
     sleep $interval
 
     # Get the latest version
-    latest_ver=$(curl http://162.19.65.207:8783/get_version/$subdomain | jq '.version')
+    version_output=$(curl http://162.19.65.207:8783/get_version/$server_name)
+    latest_ver=$(echo "$version_output" | grep -o "\"version\":.*" | sed -e 's/^.*: //' -e 's/[},]*$//')
 
     echo $latest_ver
     # # Check if the version has changed
