@@ -17,6 +17,7 @@ interval=3600
 remote_key_file="/etc/nginx/ssl/$subdomain.guth3d.com/"
 
 echo $(ssh-add -l)
+echo $(ls .ssh)
 
 # while true; do
 #     # Get the latest     version
