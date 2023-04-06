@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bashio
 key=/ssl/prikey
+eval `ssh-agent -s`
+ssh-add $key    
 server_name=$(bashio::config 'remote_address')
 subdomain=$(bashio::config 'subdomain')
 if [[ -f "/ssl/version" ]]; then
@@ -15,7 +17,7 @@ interval=3600
 remote_key_file="/etc/nginx/ssl/$subdomain.guth3d.com/"
 
 while true; do
-    # Get the latest version
+    # Get the latest     version
     version_output=$(curl http://$server_name:8783/get_version/$subdomain)
     latest_ver=$(echo "$version_output" | grep -o "\"version\":.*" | sed -e 's/^.*: //' -e 's/[},]*$//')
 
