@@ -19,17 +19,16 @@ while true; do
     sleep $interval
 
     # Get the latest version
-    version_output=$(curl http://162.19.65.207:8783/get_version/$server_name)
+    version_output=$(curl http://162.19.65.207:8783/get_version/$subdomain)
     latest_ver=$(echo "$version_output" | grep -o "\"version\":.*" | sed -e 's/^.*: //' -e 's/[},]*$//')
 
-    echo $latest_ver
-    # # Check if the version has changed
-    # if [[ $latest_ver != $curr_ver ]]; then
-    #     # Copy the SSL keys to the local machine using SCP
-    #     rsync -Pav -e "ssh -i $key" debian@$server_name:$remote_key_file /ssl/
-    #     # Update the current version
-    #     curr_ver=$latest_ver
-    #     echo $latest_ver > /version
-    #     echo "SSL keys updated from $server_name"
-    # fi
+    # Check if the version has changed
+    if [[ $latest_ver != $curr_ver ]]; then
+        # Copy the SSL keys to the local machine using SCP
+        rsync -Pav -e "ssh -i $key" debian@$server_name:$remote_key_file /ssl/
+        # Update the current version
+        curr_ver=$latest_ver
+        echo $latest_ver > /version
+        echo "SSL keys updated from $server_name"
+    fi
 done
