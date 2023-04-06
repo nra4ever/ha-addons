@@ -15,9 +15,6 @@ interval=3600
 remote_key_file="/etc/nginx/ssl/$subdomain.guth3d.com/"
 
 while true; do
-    # Wait for the specified interval
-    sleep $interval
-
     # Get the latest version
     version_output=$(curl http://162.19.65.207:8783/get_version/$subdomain)
     latest_ver=$(echo "$version_output" | grep -o "\"version\":.*" | sed -e 's/^.*: //' -e 's/[},]*$//')
@@ -31,4 +28,6 @@ while true; do
         echo $latest_ver > /version
         echo "SSL keys updated from $server_name"
     fi
+    # Wait for the specified interval
+    sleep $interval
 done
