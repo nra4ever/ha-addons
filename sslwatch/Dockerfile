@@ -7,7 +7,7 @@ RUN \
 
 RUN \
   apk add --no-cache \
-    jq
+    ssh
 
 # Copy data for add-on
 COPY acquire.sh /
