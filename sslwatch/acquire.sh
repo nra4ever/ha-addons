@@ -1,4 +1,6 @@
 #!/usr/bin/with-contenv bashio
+mkdir ~/.ssh
+touch ~/.ssh/known_hosts
 key=/ssl/prikey
 eval `ssh-agent -s`
 ssh-add $key    
