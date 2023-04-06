@@ -24,7 +24,7 @@ while true; do
     # Check if the version has changed
     if [[ $latest_ver != $curr_ver ]]; then
         # Copy the SSL keys to the local machine using SCP
-        rsync -Pav -e "ssh -i $key" debian@$server_name:$remote_key_file /ssl/
+        rsync -Pav -e "ssh -i ~/.ssh/id_rsa" debian@$server_name:$remote_key_file /ssl/
         # Update the current version
         curr_ver=$latest_ver
         echo $latest_ver > /version
