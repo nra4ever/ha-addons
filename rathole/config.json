@@ -1,7 +1,7 @@
 {
   "name": "Rathole Client",
   "slug": "ratholeclient",
-  "version": "0.5.0.0",
+  "version": "0.5.0.1",
   "description": "Even faster reverse proxy for remote access",
   "codenotary": "nra4everdev@proton.me",
   "arch": [
